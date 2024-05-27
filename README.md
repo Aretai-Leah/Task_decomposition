@@ -1,4 +1,4 @@
-##How to make a good AI planner Agent. Part 2##
+# How to make a good AI planner Agent. Part 2
 Making hierarchical plans with Autogen
 
 In the last Article, we demonstrated how to construct an effective planning Agent. 
@@ -44,7 +44,7 @@ In this article we will show how we can stack this structure indefinitely to bre
 
 
 
-##Connecting the dots##
+## Connecting the dots
 Each of the Modules ends with a function call. We connect the Modules via these function calls. The output of the function is passed as the initial message to the lower level module.
 
 
@@ -87,7 +87,7 @@ TERMINUS_W
 
 Note the very small number of tokens in the above response. The entire workflow to generate that answer has been obfuscated behind the function call. All the secondary task decomposition, agent coordination and API calling is not visible to the upper module’s group chat. All they see is the actionable results they need. 
 
-##All you need to do is maintain Attention##
+## All you need to do is maintain Attention
 
 “Attention is all you need” is a truism at this point. However, once you have it, you need to maintain it. Complex tasks often fail as the context window gets crowded with information. 
 It becomes very difficult for the agent to both discern what the actual task is and to find key information. Both of these problems are addressed through the use of hierarchical planning and execution modules. 
@@ -125,7 +125,7 @@ It took about 10 inference calls to create the Introduction text. Additionally, 
 
 The end result might be a 1500 word essay, but the upper Module Agents only know that each of the sub tasks have been completed successfully. 
 
-##Hierarchical Nested planning ##
+## Hierarchical Nested planning
 
 This modular approach allows for a practical degree of task decomposition to occur at each level without the planner needing to understand the minutiae of the action space for each capability. 
 
