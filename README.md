@@ -71,7 +71,7 @@ By doing this, the Task Decomposition Agent in the lower module can then break d
 
 For the return path; firstly the results are collated by the agent performing the function calls. Next the response agent then returns the results and ends the groupchat in the lower module. This passes the response back to the upper module via the function return. 
 
-''''	
+```
 ***** Response from calling tool (call_nVp0kN0jn3SQ85OO5i57dowK) ***** 
 
 
@@ -82,7 +82,7 @@ For the return path; firstly the results are collated by the agent performing th
 
 
 TERMINUS_W
-''''
+```
 
 
 Note the very small number of tokens in the above response. The entire workflow to generate that answer has been obfuscated behind the function call. All the secondary task decomposition, agent coordination and API calling is not visible to the upper module’s group chat. All they see is the actionable results they need. 
@@ -112,13 +112,13 @@ Naturally, writing an essay is a token intensive activity. Each text section may
 
 This is an example of the response from the introduction writing module. 
 
-''''
+```
 {
 "status": "success",
 "message": "The introduction has been successfully updated in the essay document."
 "TERMINUS_INTRO": "TERMINUS_INTRO"
 }'
-''''
+```
 
 
 It took about 10 inference calls to create the Introduction text. Additionally, the inference call that generated the final version of the text took 5656 tokens. That’s a lot of noise we have removed from the planning module’s context window. 
